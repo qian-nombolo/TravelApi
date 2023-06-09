@@ -62,7 +62,7 @@
 ```
 6. Within `EnvironmentVariables.cs`, add the following code:
 ```
-namespace AnimalApiCall.Keys
+namespace TravelApiCall.Keys
 {
   public static class EnvironmentVariables
   {
