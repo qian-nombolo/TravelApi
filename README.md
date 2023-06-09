@@ -60,10 +60,19 @@
   }
 }
 ```
+6. Within `EnvironmentVariables.cs`, add the following code:
+```
+namespace AnimalApiCall.Keys
+{
+  public static class EnvironmentVariables
+  {
+    public static string ApiKey = [YOUR-API-KEY-VALUE];
+  }
+}
+```
 
-6. Create the database using the migrations in the TravelApi project. Open your shell (e.g., Terminal or GitBash) to the production directory "TravelApi", and run `dotnet ef database update`. 
-7. Within the production directory "TravelApi", run `dotnet watch run --launch-profile "TravelApi-Production"` in the command line to start the project in production mode with a watcher. 
-8. To optionally further build out this project in development mode, start the project with `dotnet watch run` in the production directory "TravelApi".
+7. Create the database using the migrations in the TravelApi project. Open your shell (e.g., Terminal or GitBash) to the production directory "TravelApi", and run `dotnet ef database update`. 
+8. To build out this project in development mode, start the project with `dotnet watch run` in the production directory "TravelApi".
 9. Use your program of choice to make API calls. In your API calls, use the domain _http://localhost:5000_. Keep reading to learn about all of the available endpoints.
 
 ## Testing the API Endpoints
