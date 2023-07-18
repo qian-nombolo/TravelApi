@@ -85,6 +85,8 @@ If you want to use the TravelAPI Client, an ASP.NET Core MVC application, follow
 
 ```
 GET http://localhost:5000/api/{version}/travels/
+GET https://localhost:5001/api/{version}/travels/
+
 POST http://localhost:5000/api/{version}/travels/
 GET http://localhost:5000/api/{version}/travels/{id}
 PUT http://localhost:5000/api/{version}/travels/{id}
@@ -97,7 +99,7 @@ Note: `{version}` is a version number and it should be replaced with a "v2" or "
 
 #### Optional Query String Parameters for GET Request
 
-GET requests to `http://localhost:5000/api/{version}/travels/` can optionally include query strings to filter or search animals.
+GET requests to `http://localhost:5000/api/{version}/travels/` or `https://localhost:5001/api/{version}/travels/`can optionally include query strings to filter or search animals.
 
 | Parameter   | Type        |  Required    | Description |
 | ----------- | ----------- | -----------  | ----------- |
