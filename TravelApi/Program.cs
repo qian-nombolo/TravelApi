@@ -23,6 +23,11 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// add cors
+builder.Services.AddCors(c=> {
+  c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
 // Add services to the container.
 builder.Services.AddControllers();
 
@@ -101,6 +106,9 @@ else
 {
   app.UseHttpsRedirection();
 }
+
+// allow cors
+app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 app.UseAuthentication();
 app.UseAuthorization();
